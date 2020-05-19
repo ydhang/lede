@@ -65,11 +65,10 @@ jobs:
           cd openwrt-packages
           git clone https://github.com/honwen/luci-app-aliddns.git    
               
-      - name: 同步最新的源码
+      - name: Update feeds
         run: |
-          git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull openwrt master
-          git remote -v
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
           
       - name: Costom configure file
         run: |
