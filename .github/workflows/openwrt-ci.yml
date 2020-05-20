@@ -108,14 +108,14 @@ jobs:
            CONFIG_PACKAGE_ipv6helper=y
            EOF
           # 多文件系统支持:
-          # cat >> .config <<EOF
+           cat >> .config <<EOF
           # CONFIG_PACKAGE_kmod-fs-nfs=y
           # CONFIG_PACKAGE_kmod-fs-nfs-common=y
           # CONFIG_PACKAGE_kmod-fs-nfs-v3=y
           # CONFIG_PACKAGE_kmod-fs-nfs-v4=y
           # CONFIG_PACKAGE_kmod-fs-ntfs=y
-          # CONFIG_PACKAGE_kmod-fs-squashfs=y
-          # EOF
+           CONFIG_PACKAGE_kmod-fs-squashfs=y
+           EOF
           # USB3.0支持:
            cat >> .config <<EOF
            CONFIG_PACKAGE_kmod-usb-ohci=y
@@ -144,7 +144,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync=y
-           CONFIG_PACKAGE_luci-app-webadmin=y
+          # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
            EOF
